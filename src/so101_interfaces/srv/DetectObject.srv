@@ -1,0 +1,16 @@
+# Detect object and return segmented point cloud
+# Request
+string text_prompt         # Text description of object to detect
+float32 box_threshold     # Confidence threshold for detection (0.0-1.0)
+float32 text_threshold    # Text matching threshold (0.0-1.0)
+bool debug                # If true, enable verbose logging and save visualization
+
+---
+
+# Response
+bool success
+string message
+sensor_msgs/PointCloud2 pointcloud  # Segmented object point cloud in base_link frame
+int32[] bbox                         # Bounding box [x_min, y_min, x_max, y_max]
+float32 confidence                   # Detection confidence score
+geometry_msgs/Point centroid         # 3D centroid in base_link from height-filtered pointcloud

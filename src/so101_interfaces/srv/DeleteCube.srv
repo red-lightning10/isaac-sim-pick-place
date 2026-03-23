@@ -1,0 +1,7 @@
+# Remove a cube from the planning scene by name
+# Request
+string object_name   # e.g. cube_0, cube_1, ...
+---
+# Response
+bool success
+string message

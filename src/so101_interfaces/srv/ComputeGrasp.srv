@@ -1,0 +1,13 @@
+# Compute 6-DOF grasps (GPD)
+# Request
+sensor_msgs/PointCloud2 pointcloud  # Input segmented object point cloud
+int32[] bbox                         # Bounding box [x_min, y_min, x_max, y_max] in image coordinates
+bool debug                           # If true, enable verbose logging and save visualization
+
+---
+
+# Response
+bool success
+string message
+geometry_msgs/PoseArray grasp_poses  # 6-DOF grasps in base_link frame
+std_msgs/Float32MultiArray widths   # Grasp widths in meters (same order)

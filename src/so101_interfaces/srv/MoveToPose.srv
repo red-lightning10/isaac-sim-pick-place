@@ -1,0 +1,8 @@
+# Move robot to a target pose using MoveIt
+# Request
+geometry_msgs/PoseStamped target_pose
+bool use_cartesian_fraction   # If true, execute only cartesian_fraction of path (stop short)
+---
+# Response
+bool success
+string message

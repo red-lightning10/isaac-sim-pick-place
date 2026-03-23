@@ -1,0 +1,7 @@
+# Move gripper to target position using MoveIt
+# Request
+float64 position  # Joint position in radians (e.g. 0.2618 for 15 deg open)
+---
+# Response
+bool success
+string message
