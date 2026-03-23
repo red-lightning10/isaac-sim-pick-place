@@ -159,7 +159,7 @@ def _launch_setup(context, *args, **kwargs):
         output="screen",
         parameters=[moveit_common_params, {"use_sim_time": use_sim_time}],
     )
-
+    
     rviz2 = Node(
         package="rviz2",
         executable="rviz2",

@@ -31,7 +31,7 @@
         <joint name="shoulder_lift" value="0"/>
         <joint name="shoulder_pan" value="0"/>
         <joint name="wrist_flex" value="0"/>
-        <joint name="wrist_roll" value="0"/>
+        <joint name="wrist_roll" value="1.5708"/>
     </group_state>
     <group_state name="Position_1" group="arm">
         <joint name="elbow_flex" value="-0.2521"/>

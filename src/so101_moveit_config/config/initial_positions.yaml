@@ -6,4 +6,4 @@ initial_positions:
   shoulder_lift: 0.0
   shoulder_pan: 0.0
   wrist_flex: 0.0
-  wrist_roll: 0.0
+  wrist_roll: 1.5708  # 90 deg (pi/2) - rolled orientation for grasp

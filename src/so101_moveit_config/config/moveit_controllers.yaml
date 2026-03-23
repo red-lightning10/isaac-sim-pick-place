@@ -17,12 +17,7 @@ moveit_simple_controller_manager:
       - wrist_roll
     action_ns: follow_joint_trajectory
     default: true
-  # gripper_controller:
-  #   type: GripperCommand
-  #   joints:
-  #     - gripper
-  #   action_ns: gripper_cmd
-  #   default: true
+
   gripper_controller:
     type: FollowJointTrajectory
     joints:
