@@ -1,4 +1,4 @@
-# Pick & Place — Isaac Sim + ROS 2
+# Pick & Place — Isaac Sim
 
 ## Overview
 
@@ -8,20 +8,6 @@ Complete pick-and-place pipeline for the SO101 robot in Isaac Sim:
 - **grasping** — GGCNN for 6-DOF grasp pose computation from depth + bbox
 - **so101_state_machine** — py_trees behavior tree (detect → grasp → attach → move to tray → detach)
 - **so101_moveit_interface** — MoveIt services for arm and gripper
-
-## Pipeline
-
-```
-Isaac Sim (camera + move_group)
-    ↓
-[detection_service]  GroundingDINO + FastSAM → DetectObject (bbox, pointcloud, centroid)
-    ↓
-[ggcnn_service]       Depth + bbox → ComputeGrasp (6-DOF grasp poses)
-    ↓
-[bt_node]             Open gripper → Grabbing → Attach → MoveToBoxPosition → Detach → Open
-    ↓
-[move_to_pose_server] gripper_frame_link target → gripper_link (via TF)
-```
 
 ---
 
