@@ -10,7 +10,7 @@ def package_files(directory):
             paths.append(os.path.join('..', path, filename))
     return paths
 
-extra_files = package_files('ros2_ggcnn/models')
+extra_files = package_files('grasping/models')
 
 setup(
     name=package_name,
@@ -32,7 +32,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'ggcnn_service = ros2_ggcnn.ggcnn_service:main',
+            'ggcnn_service = grasping.ggcnn_service:main',
         ],
     },
 )

@@ -14,7 +14,7 @@
 
 3. Open another terminal to launch the GGCNN service node:
     ```bash
-    ros2 run ros2_ggcnn ggcnn_service_node
+    ros2 run grasping ggcnn_service_node
     ```
 
 4. Open another terminal to call the `get_grasp` service with bounding box coordinates:
