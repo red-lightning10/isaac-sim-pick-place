@@ -1,0 +1,41 @@
+# Pick-and-Place pipeline dependencies.
+# Install via: ./scripts/setup_env.sh
+# ROS packages (rclpy, cv_bridge, sensor_msgs) come from apt.
+
+# setuptools<70 required for pkg_resources (GroundingDINO CLIP, FastSAM/ultralytics)
+setuptools>=58,<70
+
+# ROS build (colcon + rosidl) when using venv for build
+empy==3.3.2
+catkin_pkg
+lark
+
+# --- object_detection (GroundingDINO + FastSAM) ---
+numpy>=1.26,<2
+torch
+torchvision
+Pillow>=9.0
+opencv-python>=4.6.0
+transformers==4.36.2
+addict
+yapf
+timm
+supervision>=0.22.0
+scipy
+
+# FastSAM (ultralytics-based)
+matplotlib>=3.2.2
+PyYAML>=5.3.1
+requests>=2.23.0
+tqdm>=4.64.0
+pandas>=1.1.4
+seaborn>=0.11.0
+gradio==3.35.2
+ultralytics==8.0.120
+
+# --- grasping (GGCNN) ---
+scikit-image
+transforms3d
+
+# --- so101_state_machine (behavior tree) ---
+py_trees
