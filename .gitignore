@@ -1,7 +1,22 @@
+# Build artifacts
 build/
 install/
 log/
 .colcon/
+
+# Dependencies (cloned by setup_env.sh; not for repo)
+src/object_detection/deps/
+
+# Virtual environment (created by setup_env.sh)
+env_pickplace/
+
+# Weights (user downloads; not for repo)
+weights/
+
+# Debug output
+output/
+
+# Misc
 __pycache__/
 *.pyc
 .pytest_cache/
