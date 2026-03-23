@@ -9,6 +9,22 @@ Complete pick-and-place pipeline for the SO101 robot in Isaac Sim:
 - **so101_state_machine** — py_trees behavior tree (detect → grasp → attach → move to tray → detach)
 - **so101_moveit_interface** — MoveIt services for arm and gripper
 
+### Demo
+
+The pipeline detects objects via text prompts: **"red-mug"** for picking and **"container"** for the drop target.
+
+**Initial** — Scene before run. Red mug on table, container (tray) visible.
+
+![Initial](images/initial.png)
+
+**Pick-up** — Robot grasps the red mug using the "red-mug" detection prompt.
+
+![Pick-up](images/pick-up.png)
+
+**Drop** — Robot places the mug into the container using the "container" prompt as drop target.
+
+![Drop](images/drop.png)
+
 ---
 
 ## Setup & Build
