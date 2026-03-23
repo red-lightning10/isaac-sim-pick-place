@@ -1,0 +1,4 @@
+spawn_cube_server:
+  ros__parameters:
+    base_frame: "base_link"
+    debug: false

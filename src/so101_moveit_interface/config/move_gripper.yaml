@@ -1,0 +1,6 @@
+move_gripper_server:
+  ros__parameters:
+    planning_group: "gripper"
+    velocity_scaling: 0.5
+    acceleration_scaling: 0.5
+    debug: false
