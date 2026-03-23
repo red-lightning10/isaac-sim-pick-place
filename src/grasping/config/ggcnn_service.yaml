@@ -1,0 +1,8 @@
+# model_path uses $REPO_ROOT (set by launch_pipeline.sh)
+ggcnn_service_node:
+  ros__parameters:
+    model_path: "$REPO_ROOT/weights/ggcnn_weights_cornell/ggcnn_epoch_23_cornell_statedict.pt"
+    depth_topic: "/front_camera/depth"
+    camera_info_topic: "/front_camera/camera_info"
+    camera_frame: "front_camera"
+    z_offset: 0.0
