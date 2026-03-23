@@ -1,0 +1,14 @@
+detection_service_node:
+  ros__parameters:
+    color_image_topic: "/front_camera/rgb"
+    depth_image_topic: "/front_camera/depth"
+    camera_info_topic: "/front_camera/camera_info"
+    grounding_dino_config:  "$REPO_ROOT/weights/GroundingDINO_SwinT_OGC.py"
+    grounding_dino_weights: "$REPO_ROOT/weights/groundingdino_swint_ogc.pth"
+    fastsam_weights: "$REPO_ROOT/weights/FastSAM-x.pt"
+    box_threshold: 0.45
+    text_threshold: 0.25
+    device: "cuda" 
+    input_encoding: ""
+    target_frame: "base_link"
+    height_filter_z_min: 0.02
