@@ -6,8 +6,8 @@ from pxr import Sdf, UsdPhysics, Gf
 # CONFIG
 # -----------------------------
 
-# Cup rigid body (Body1)
-CUP_BODY_PATH_STR = "/World/SM_Mug_A2_red/SM_Mug_A2"
+# Cup rigid body (Body1) - RigidBodyAPI is on SM_Mug_A2_red, not SM_Mug_A2
+CUP_BODY_PATH_STR = "/World/SM_Mug_A2_red"
 
 # Jaw rigid body (Body0)
 JAW_BODY_PATH_STR = "/World/so101_new_calib/moving_jaw_so101_v1_link"
@@ -121,7 +121,7 @@ def _attach(stage):
     joint.CreateLocalPos1Attr(Gf.Vec3f(float(t1[0]), float(t1[1]), float(t1[2])))
     joint.CreateLocalRot1Attr(_quatd_to_quatf(q1))
 
-    carb.log_warn("✅ ATTACH: Fixed joint created at jaw grasp frame for cup")
+    carb.log_warn("✅ ATTACH: Fixed joint created")
     return True
 
 
@@ -129,7 +129,7 @@ def _detach(stage):
     if not _valid(stage, JOINT_PATH_STR):
         return True
     stage.RemovePrim(Sdf.Path(JOINT_PATH_STR))
-    carb.log_warn(f"✅ DETACH: Removed fixed joint {JOINT_PATH_STR}")
+    carb.log_warn("✅ DETACH: Removed fixed joint")
     return True
 
 # -----------------------------
